@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb')
 const mongoose = require('mongoose')
-const uri = "mongodb+srv://sdev255:bzX3Nx5oAlvvVXxr@sdev255-group4-db.cuhjnr4.mongodb.net/?appName=sdev255-group4-db";
+const uri = "mongodb+srv://bwputhoff:password123_@cluster0.fpen3ba.mongodb.net/?appName=Cluster0";
 
 async function run() {
   try {
