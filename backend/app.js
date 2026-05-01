@@ -16,8 +16,17 @@ const { requireRole } = require("./scripts/auth")
 const mongoose = require("mongoose")
 require("dotenv").config()
 
-app.use(cors())
-app.use(bodyParser.json())
+app.use(cors({
+    origin: [
+        "https://brice-647.github.io",
+        "https://brice-647.github.io/SDEV225_Mod7Tut"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+}));
+
+app.use(bodyParser.json());
 
 // Gets all of the students from the DB
 router.get("/students", async (req, res) => {
